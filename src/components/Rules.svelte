@@ -32,15 +32,15 @@
     </picture>
     <!-- svelte-ignore a11y-click-events-have-key-events -->
     <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
-    <figure class="rules-close-icon" >
+    <figure class="rules-close-icon" on:click={handleClose}>
         <!-- svelte-ignore a11y-no-static-element-interactions -->
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" on:click={handleClose}><path fill="#3B4262" fill-rule="evenodd" d="M16.97 0l2.122 2.121-7.425 7.425 7.425 7.425-2.121 2.12-7.425-7.424-7.425 7.425L0 16.97l7.425-7.425L0 2.121 2.121 0l7.425 7.425L16.971 0z" opacity=".25"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" ><path fill="#3B4262" fill-rule="evenodd" d="M16.97 0l2.122 2.121-7.425 7.425 7.425 7.425-2.121 2.12-7.425-7.424-7.425 7.425L0 16.97l7.425-7.425L0 2.121 2.121 0l7.425 7.425L16.971 0z" opacity=".25"/></svg>
     </figure>
 </section>
 
 <style>
     .rules-close-icon{
-        margin-top: 9.6rem;
+        margin-top: 5.6rem;
     }
     .rules-container{
        margin: -2rem ;
@@ -54,14 +54,45 @@
     }
  .rules-title{
     color: rgb(59, 66, 98);
-    font-family: Barlow Semi Condensed;
     font-size: 32px;
     font-weight: 700;
     line-height: 32px;
-    margin-top:6rem;
+    margin-top:4rem;
  } 
 .rules-picture svg{
-    margin-top: 7rem;
+    margin-top: 5rem;
+}
+@media only screen and (min-width: 1024px) {
+    .rules-container {
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr; /* Change to auto for the title row */
+            align-items: center;
+            margin-top:0rem;
+            padding:0;
+            height: 60vh;
+            width: 65vw;
+            justify-content:center;
+            align-content: center;
+        }
+     
+        .rules-title {
+           margin-left: -14rem;
+            margin-top: 0rem; /* Adjusted margin */
+            grid-column: 1;
+            grid-row: 1; /* Add this line */
+        }
+
+        .rules-picture svg {
+            margin: 0rem 0rem 0rem 2rem;
+            display: flex;
+            justify-content: center;
+        }
+
+        .rules-close-icon {
+            grid-row: 1; /* Add this line */
+            padding-right: 2rem;
+             margin: 0;
+        }
 }
 
 </style>

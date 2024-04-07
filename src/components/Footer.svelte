@@ -48,18 +48,16 @@
    @media only screen and (min-width: 1024px) {
  
       .footer-container {
-     
+         
          display: inline-block; 
          justify-content: flex-end;
          padding: 11px 36px 10px 37px;
          border: 1px solid rgb(255, 255, 255);
          border-radius: 8px;
-         background: linear-gradient(0.00deg, rgb(243, 243, 243),rgb(255, 255, 255) 100%);
+         background: none;
       }
-      .footer-text {
-      color:  rgb(59, 66, 98);
-      
-   } 
+    
+  
      
    }
    
