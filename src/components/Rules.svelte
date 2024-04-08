@@ -69,29 +69,32 @@
             align-items: center;
             margin-top:0rem;
             padding:0;
-            height: 60vh;
-            width: 65vw;
+            height: 50vh;
+            padding-bottom: 1rem;
+           padding-left: 2rem;
             justify-content:center;
             align-content: center;
         }
      
         .rules-title {
            margin-left: -14rem;
-            margin-top: 0rem; /* Adjusted margin */
+            margin-top: 1rem; /* Adjusted margin */
             grid-column: 1;
             grid-row: 1; /* Add this line */
         }
 
         .rules-picture svg {
             margin: 0rem 0rem 0rem 2rem;
+            padding-top: 2rem;
             display: flex;
             justify-content: center;
         }
 
         .rules-close-icon {
+            margin: 1rem 0 0 0;
             grid-row: 1; /* Add this line */
             padding-right: 2rem;
-             margin: 0;
+             
         }
 }
 
