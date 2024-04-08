@@ -8,6 +8,8 @@
    }
 </script>
 
+<!-- svelte-ignore a11y-click-events-have-key-events -->
+<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
 <footer class="footer-container" on:click={openRules}>
    <button class="footer-button">
       <span class="footer-text">RULES</span>

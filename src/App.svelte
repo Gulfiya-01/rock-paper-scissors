@@ -6,10 +6,11 @@
 	import Footer from './components/Footer.svelte';
     import Rules from './components/Rules.svelte';
 	import Header from './components/Header.svelte';
+	
     const mediaQuery = window.matchMedia('(min-width: 1024px)');
-    let isDesktop = !mediaQuery.matches; 
+    let isMobile = !mediaQuery.matches; 
     function mediaQueryHandler(event: MediaQueryListEvent) {
-        isDesktop = !event.matches;
+        isMobile = !event.matches;
     }
 
     onMount(() => {
@@ -36,12 +37,13 @@
     }
 </script>
 
-{#if isDesktop}
+{#if isMobile}
 
 <main class="app">
+
     {#if !showRules} 
     <Header/>
-    
+
         {#if step === 1}
             <FirstStep on:setpage={handleSetPage}/>
         {:else if step === 2}
